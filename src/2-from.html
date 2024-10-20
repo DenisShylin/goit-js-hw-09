@@ -3,78 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Email Form</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        position: relative; /* Добавлено */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
-      }
-      .form-container {
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 300px;
-      }
-      .form-title {
-        font-size: 18px;
-        margin-bottom: 15px;
-      }
-      input[type='email'],
-      textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-      input[type='email']:hover {
-        border-color: #999;
-      }
-      input[type='email']:focus {
-        border-color: #4285f4;
-        outline: none;
-      }
-      textarea {
-        height: 100px;
-        resize: vertical;
-      }
-      button {
-        background-color: #4285f4;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
-      }
-      button:hover {
-        background-color: #3367d6;
-      }
-      .back-link {
-        position: absolute; /* Добавлено */
-        top: 20px; /* Добавлено */
-        left: 20px; /* Добавлено */
-        background-color: beige;
-        color: rgb(0, 0, 0);
-        border: 1px solid black;
-        padding: 10px 15px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
-        text-decoration: none;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/back-link.css" />
+    <link rel="stylesheet" href="./css/from.css" />
   </head>
   <body>
     <a class="back-link" href="./index.html">Go back</a>
-    <!-- Переместили ссылку выше -->
+
     <div class="form-container">
       <form id="feedback-form">
         <label for="email">Email</label>
