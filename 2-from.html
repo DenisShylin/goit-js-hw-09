@@ -6,6 +6,7 @@
     <style>
       body {
         font-family: Arial, sans-serif;
+        position: relative; /* Добавлено */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -56,9 +57,24 @@
       button:hover {
         background-color: #3367d6;
       }
+      .back-link {
+        position: absolute; /* Добавлено */
+        top: 20px; /* Добавлено */
+        left: 20px; /* Добавлено */
+        background-color: beige;
+        color: rgb(0, 0, 0);
+        border: 1px solid black;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
+    <a class="back-link" href="./index.html">Go back</a>
+    <!-- Переместили ссылку выше -->
     <div class="form-container">
       <form id="feedback-form">
         <label for="email">Email</label>
@@ -73,7 +89,6 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-
     <script src="2-form.js"></script>
   </body>
 </html>
