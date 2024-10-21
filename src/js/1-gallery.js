@@ -1,4 +1,3 @@
-// Імпортуємо бібліотеку SimpleLightbox та її стилі
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -68,31 +67,24 @@ const images = [
   },
 ];
 
-// Обираємо контейнер галереї
-const galleryContainer = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 
-// Створюємо розмітку галереї
-const galleryMarkup = images
-  .map(({ preview, original, description }) => {
-    return `
-      <li class="gallery-item">
-        <a class="gallery-link" href="${original}">
-          <img
-            class="gallery-image"
-            src="${preview}"
-            alt="${description}"
-          />
-        </a>
-      </li>
-    `;
-  })
-  .join('');
+const createGalleryItem = ({ preview, original, description }) => `
+  <li class="gallery-item">
+    <a class="gallery-link" href="${original}">
+      <img
+        class="gallery-image"
+        src="${preview}"
+        alt="${description}"
+      />
+    </a>
+  </li>
+`;
 
-// Додаємо розмітку в DOM
-galleryContainer.innerHTML = galleryMarkup;
+const galleryMarkup = images.map(createGalleryItem).join('');
+gallery.innerHTML = galleryMarkup;
 
-// Ініціалізуємо SimpleLightbox
-let gallery = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
