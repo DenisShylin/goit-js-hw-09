@@ -2,28 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Email Form</title>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/2-form-Dw9f0ykw.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/back-link-BrzGFx6n.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script type="module" crossorigin src="/goit-js-hw-09/2-form.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-D4KzYCzH.css">
   </head>
   <body>
-    <a class="back-link" href="./index.html">Go back</a>
+    <main>
+      <div class="container">
+        <h1 class="main-title">Form</h1>
+        <a class="back-link" href="./index.html">Go back</a>
 
-    <div class="form-container">
-      <form id="feedback-form" action="/submit-form" method="post">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="" required />
-        <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder=""
-          required
-        ></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    <!-- Підключення скрипта -->
-    <script src="./js/2-form.js"></script>
+      </div>
+    </main>
+
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        Email
+        <input type="email" name="email" autofocus />
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="8"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
   </body>
 </html>
